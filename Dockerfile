@@ -8,7 +8,7 @@ RUN --mount=type=cache,target=/root/.m2 mvn -B -e -C -T 1C org.apache.maven.plug
 COPY app/mvnw .
 COPY app/src src
 
-RUN mvn clean install -DskipTests
+RUN mvn clean install -DskipTests -B
 
 ### Image assembly
 FROM openjdk:8-jre-alpine
