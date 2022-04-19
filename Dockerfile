@@ -3,8 +3,6 @@ FROM maven:3.8.5-openjdk-8-slim as build
 WORKDIR /workspace
 
 COPY app/pom.xml .
-RUN --mount=type=cache,target=/root/.m2 mvn -B -e -C -T 1C org.apache.maven.plugins:maven-dependency-plugin:3.1.2:go-offline
-
 COPY app/mvnw .
 COPY app/src src
 
