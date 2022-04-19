@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: n5xc-frontend
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build-container:

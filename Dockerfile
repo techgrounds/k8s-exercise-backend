@@ -6,7 +6,7 @@ COPY app/pom.xml .
 COPY app/mvnw .
 COPY app/src src
 
-RUN mvn clean install -DskipTests -B
+RUN mvn clean install -DskipTests -B -ntp
 
 ### Image assembly
 FROM openjdk:8-jre-alpine
